@@ -1,0 +1,17 @@
+<div fxLayout="row" fxFill fxLayoutAlign="center center">
+    <md-card>
+      <md-card-header>
+        <div md-card-avatar [style.background-image]="'url(' + user?.photoURL + ')'" class="example-header-image"></div>
+        <md-card-title>{{user?.displayName}}</md-card-title>
+        <md-card-subtitle>{{ user?.email }}</md-card-subtitle>
+      </md-card-header>
+      <md-card-content fxLayout="column" *ngIf="!isLoggedIn">
+      </md-card-content>
+      <md-card-actions fxLayout="row" fxLayoutAlign="end center">
+        <button md-button (click)="login()">
+          {{ isLoggedIn ? "Change user" : "Login"}}
+        </button>
+        <button *ngIf="isLoggedIn" md-button (click)="logout()">Logout</button>
+      </md-card-actions>
+    </md-card>
+</div>
