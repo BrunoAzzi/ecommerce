@@ -1,0 +1,13 @@
+<md-sidenav-container fxFlex>
+  <topnavbar>
+      <h1>{{breadcrumb}}</h1>
+  </topnavbar>
+
+      <md-sidenav mode="side" opened="true">
+        <navigation></navigation>
+      </md-sidenav>
+
+  <div >
+      <router-outlet></router-outlet>
+  </div>
+</md-sidenav-container>

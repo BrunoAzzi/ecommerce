@@ -6,9 +6,9 @@
     "ng": "ng --no-progress",
     "start": "ng serve --no-progress",
     "build": "ng build --no-progress",
-    "test": "ng test --no-progress",
+    "test:unit": "ng test --no-progress",
     "lint": "ng lint --no-progress",
-    "e2e": "ng e2e --no-progress"
+    "test:e2e": "ng e2e --no-progress"
   },
   "private": true,
   "dependencies": {
@@ -19,7 +19,7 @@
     "@angular/flex-layout": "^2.0.0-beta.8",
     "@angular/forms": "^4.0.0",
     "@angular/http": "^4.0.0",
-    "@angular/material": "^2.0.0-beta.7",
+    "@angular/material": "^2.0.0-beta.5",
     "@angular/platform-browser": "^4.0.0",
     "@angular/platform-browser-dynamic": "^4.0.0",
     "@angular/router": "^4.0.0",

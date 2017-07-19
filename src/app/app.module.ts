@@ -11,11 +11,26 @@ import { AppRoutingModule } from "./app-routing.module";
 import { LoginComponent } from './views/login/login.component';
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { MaterialModule } from "./modules/material/material.module";
+import { BasicLayout } from "./components/layouts/basic/layout/layout.component"
+import { NavigationComponent } from "./components/layouts/basic/navigation/navigation.component"
+import { TopnavbarComponent } from "./components/layouts/basic/topnavbar/topnavbar.component"
+import { BlankLayout } from "./components/layouts/blank/blank.component";
+import { OverviewComponent } from './views/overview/overview.component'
 
 @NgModule({
   declarations: [
     AppComponent,
-    LoginComponent
+
+    // Layouts
+    BlankLayout,
+    BasicLayout,
+    NavigationComponent,
+    TopnavbarComponent,
+
+    // Views
+    OverviewComponent,
+    LoginComponent,
+
   ],
   imports: [
     MaterialModule,

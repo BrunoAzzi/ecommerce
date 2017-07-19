@@ -1,0 +1,22 @@
+<md-toolbar color="primary" class="mat-elevation-z6">
+    <button md-icon-button fxLayoutAlign="center" (click)="toggleSidenav()">
+        <md-icon>menu</md-icon>
+    </button>
+    <span>Menu title</span>
+    <ng-content></ng-content>
+
+    <span fxFlex></span>
+
+    <md-icon>help</md-icon>
+    <md-icon>notifications</md-icon>
+
+    <md-menu #appMenu="mdMenu" yPosition="below" [overlapTrigger]="false">
+        <button md-menu-item (click)="logout()">Sair</button>
+      <button *ngIf="!logged" md-menu-item (click)="login()">Login</button>
+      <button md-menu-item (click)="changeUser()">Trocar usuário</button>
+    </md-menu>
+
+    <a class="icon" fxFlexAlign="center" md-icon-button [mdMenuTriggerFor]="appMenu" disableRipple>
+      <img class="avatar" src="http://placehold.it/40x40" alt="avatar">
+    </a>
+</md-toolbar>
